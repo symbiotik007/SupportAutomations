@@ -1,0 +1,45 @@
+<div class="card">
+  <div class="card-header">Generator</div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <form>
+        <div class="form-group">
+          <input
+            type="number"
+            class="form-control"
+            id="upc"
+            placeholder="Enter UPC"
+            [formControl]="productUpc"
+          />
+          <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            id="storeList"
+            placeholder="Enter Store List"
+            [formControl]="storeList"
+          />
+          <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" [checked]="isOnStore" (change)="setStatusStoreList(isOnStore)" />
+          <label class="form-check-label"
+            >{{isOnStore}}</label
+          >
+        </div>
+        <button
+          type="submit"
+          class="btn btn-primary mt-2"
+          (click)="generateUpc()"
+        >
+          Generate
+        </button>
+      </form>
+    </blockquote>
+  </div>
+</div>
+<div class="card mt-3">
+  <div class="card-body">This is some text within a card body.</div>
+</div>
